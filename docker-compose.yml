@@ -6,9 +6,9 @@ services:
     ports:
       - 8080:8080
     environment:
-      DB_URL: jdbc:postgresql://postgrespring/task
-      DB_USERNAME: postgres
-      DB_PASSWORD: dramblysAdminas123.
+      DB_URL: ${DB_URL}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
   front-end:
     build:
       context: ./frontend
@@ -20,9 +20,9 @@ services:
     volumes:
       - dbdata:/var/lib/postgresql/data  
     environment:
-      - POSTGRES_PASSWORD=dramblysAdminas123.
-      - POSTGER_USER=postgres
-      - POSTGRES_DB=task
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGER_USER=${DB_USERNAME}
+      - POSTGRES_DB=${DB_DATABASE}
 
 volumes:
   dbdata:
