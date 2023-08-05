@@ -1,0 +1,80 @@
+.task {
+	width: 100%;
+	max-width: 750px;
+	padding: 1.2rem;
+	position: relative;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task input[type="checkbox"] {
+    margin-right: 1rem;
+}
+
+.completed {
+    text-decoration: line-through;
+    margin-right: auto;
+    font-weight: 600;
+    color: var(--text-primary);
+    opacity: 0.6;
+}
+
+.task-title {
+    color: var(--text-primary);
+    flex-shrink: 1;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: auto;
+    white-space: normal;
+    max-width: calc(100% - 3rem);
+    overflow-wrap: break-word;
+}
+  
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+}
+  
+.checkbox-input {
+    display: none;
+}
+  
+.custom-checkbox {
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 0.125rem solid var(--primary);
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    background-color: var(--surface);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+  
+.checkbox-input:checked + .custom-checkbox {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.delete-icon {
+    flex: none;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+}
+
+.delete-icon-wrapper {
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+}
+
+.delete-icon:hover .delete-icon-wrapper {
+    transform: scale(1.1);
+}
+
+
